@@ -1,0 +1,30 @@
+Linux para tu New Nintendo 2DS XL - descarga preparada
+
+Proyecto: 3DS-CLI, version 5.3.1
+https://github.com/cmdada/3DS-CLI/releases/tag/5.3.1
+
+Archivos transferidos a la SD. Instala el CIA con FBI para que aparezca en el menu.
+/Image fue comprobado por tamano y tres muestras de bytes; no por SHA256 remoto completo.
+Cuando vuelvas, podemos transferir por FTP el contenido de
+PARA COPIAR A LA SD a las mismas rutas de la tarjeta.
+Image va en la raiz; el CIA queda en cias para instalar con FBI.
+El .3dsx queda disponible para Homebrew Launcher.
+No mezclar Image y ejecutable de versiones diferentes.
+
+Es Linux RISC-V emulado dentro de homebrew, no un kernel ARM
+nativo nuevo ni un reemplazo del sistema Nintendo. La primera
+vez extrae rootfs.ext2 en la SD; el proyecto indica unos 200 MB
+para el sistema y 64 MB de swap. Hay que revisar espacio libre.
+No cambiar boot.firm ni instalar nada en las particiones FIRM.
+
+El proyecto incluye herramientas de red y Dropbear. Su red actual
+permite conexiones salientes, pero no acceso SSH entrante directo.
+Por ello esta descarga no deja la consola lista para administrarla
+desde el PC: hay que preparar y probar ese acceso por separado.
+La documentacion original usa root sin clave al inicio; antes de
+habilitar acceso remoto configuraremos autenticacion.
+
+El ZIP original, comprobado, esta en descargas.
+procedencia.json registra origen, version y SHA256. Los archivos
+para 3DS se extrajeron y verificaron sin ejecutar el programa.
+Pendiente: prueba de arranque en tu consola e instalacion contigo.

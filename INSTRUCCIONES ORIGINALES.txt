@@ -1,0 +1,25 @@
+3DS-CLI - RISC-V Linux on Nintendo consoles.
+
+Copy `Image` to the root of the console's SD card, then the binary
+for your console. rootfs.ext2 is unpacked from Image on first boot
+and becomes the writable disk from then on.
+
+  3DS       Image -> sdmc:/Image
+            3ds/3ds-cli.3dsx -> sdmc:/3ds/3ds-cli/3ds-cli.3dsx
+  Wii U     Image -> sd:/Image
+            wiiu/3ds-cli.wuhb -> sd:/wiiu/apps/3ds-cli.wuhb
+  Switch    Image -> sdmc:/Image
+            switch/3ds-cli.nro -> sdmc:/switch/3ds-cli.nro
+  Wii       Image -> sd:/Image
+            wii/3ds-cli.dol -> sd:/apps/3ds-cli/boot.dol
+  PSP       Image -> ms0:/Image
+            psp/EBOOT.PBP -> ms0:/PSP/GAME/3ds-cli/EBOOT.PBP
+  PS Vita   Image -> ux0:/Image
+            vita/3ds-cli.vpk - install it with VitaShell
+  PS3       ps3/3ds-cli.pkg - install it from the XMB, then
+            Image -> /dev_hdd0/3ds-cli/Image. There is no removable
+            card: copy it over FTP. Needs a display that can do
+            720p. ps3/3ds-cli.self is there for loaders that want
+            one instead of the .pkg.
+  GameCube  needs an SD Gecko or SD2SP2 in slot A; a memory card
+            cannot hold the rootfs. Image -> carda:/Image
